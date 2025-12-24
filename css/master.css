@@ -17,8 +17,8 @@ ul {
 .container {
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Small */
 @media (min-width: 768px) {
