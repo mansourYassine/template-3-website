@@ -43,38 +43,60 @@ ul {
 }
 /* End global rules */
 /* Start Header */
-header {
-    /* background-color: #eee; */
-}
 header .container {
     display: flex;
     justify-content: space-between;
+}
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
 }
 header .logo > a {
     color: var(--main-color);
     font-size: 28px;
     font-weight: bold;
     margin: 0;
-}
-header a {
-    display: block;
-    /* background-color: grey; */
-    height: 80px;
     line-height: 72px;
+}
+@media (max-width: 768px) {
+    header .logo {
+        width: fit-content;
+        margin: auto;
+    }
+    header .logo > a {
+        line-height: 50px;
+    }
 }
 header ul {
     display: flex;
     justify-content: space-around;
-    width: 500px;
+    /* width: 500px; */
     height: fit-content;
 } 
+@media (max-width: 768px) {
+    header ul {
+        margin: auto;
+    }
+}
 header ul li a {
+    display: block;
+    line-height: 72px;
     color: black;
     text-decoration: none;
     font-size: 18px;
     padding: 0 30px;
     white-space: nowrap;
     position: relative;
+    transition-duration: 0.5s;
+}
+@media (max-width: 768px) {
+    header ul li a {
+        padding: 0 10px;
+        transition-duration: 0.5s;
+        font-size: 14px;
+        line-height: 30px;
+    }
 }
 header ul li a:hover {
     color: var(--main-color);
