@@ -43,6 +43,10 @@ ul {
 }
 /* End global rules */
 /* Start Header */
+header {
+    background-color: white;
+    box-shadow: 0 0 10px #ddd;
+}
 header .container {
     display: flex;
     justify-content: space-between;
@@ -68,7 +72,7 @@ header .logo > a {
         line-height: 50px;
     }
 }
-header ul {
+header .main-nav {
     display: flex;
     justify-content: space-around;
     /* width: 500px; */
@@ -79,7 +83,7 @@ header ul {
         margin: auto;
     }
 }
-header ul li a {
+header .main-nav > li > a {
     display: block;
     line-height: 72px;
     color: black;
@@ -91,26 +95,26 @@ header ul li a {
     transition-duration: 0.5s;
 }
 @media (max-width: 768px) {
-    header ul li a {
+    header .main-nav > li > a {
         padding: 0 10px;
         transition-duration: 0.5s;
         font-size: 14px;
         line-height: 30px;
     }
 }
-header ul li a:hover {
+header .main-nav > li > a:hover {
     color: var(--main-color);
 }
-header ul li a::before {
+header .main-nav > li > a::before {
     content: "";
     position: absolute;
     background-color: var(--main-color);
     width: 0%;
     height: 4px;
     left: 0;
-    transition-duration: .3s;
+    transition-duration: .5s;
 }
-header ul li a:hover::before {
+header .main-nav > li > a:hover::before {
     width: 100%;
 }
 /* End Header */
