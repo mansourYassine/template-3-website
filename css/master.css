@@ -5,6 +5,8 @@
 :root {
     --main-color: #2196F3;
     --main-color-alt: #1787E0;
+    --header-height: 72px;
+    --main-transition-duration: 0.3s;
 }
 html {
     scroll-behavior: smooth;
@@ -54,6 +56,7 @@ header {
 header .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
 }
 @media (max-width: 768px) {
@@ -61,12 +64,14 @@ header .container {
         flex-direction: column;
     }
 }
-header .logo > a {
+/* Logo */
+header .logo {
     color: var(--main-color);
     font-size: 28px;
     font-weight: bold;
-    margin: 0;
-    line-height: 72px;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
 }
 @media (max-width: 768px) {
     header .logo {
@@ -77,32 +82,29 @@ header .logo > a {
         line-height: 50px;
     }
 }
+/* Nav links */
 header .main-nav {
     display: flex;
-    justify-content: space-around;
-    /* width: 500px; */
-    height: fit-content;
 } 
 @media (max-width: 768px) {
-    header ul {
+    header .main-nav {
         margin: auto;
     }
 }
 header .main-nav > li > a {
-    display: block;
-    line-height: 72px;
     color: black;
-    text-decoration: none;
     font-size: 18px;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
     padding: 0 30px;
-    white-space: nowrap;
     position: relative;
-    transition-duration: 0.5s;
+    transition-duration: var(--main-transition-duration);
 }
 @media (max-width: 768px) {
     header .main-nav > li > a {
         padding: 0 10px;
-        transition-duration: 0.5s;
+        transition-duration: var(--main-transition-duration);
         font-size: 14px;
         line-height: 30px;
     }
@@ -116,8 +118,9 @@ header .main-nav > li > a::before {
     background-color: var(--main-color);
     width: 0%;
     height: 4px;
+    top: 0;
     left: 0;
-    transition-duration: .5s;
+    transition-duration: var(--main-transition-duration);
 }
 header .main-nav > li > a:hover::before {
     width: 100%;
