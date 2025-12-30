@@ -71,6 +71,7 @@ header .logo {
     font-weight: bold;
     height: var(--header-height);
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 @media (max-width: 768px) {
@@ -96,6 +97,7 @@ header .main-nav > li > a {
     font-size: 18px;
     height: var(--header-height);
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 30px;
     position: relative;
