@@ -110,6 +110,7 @@ header .main-nav > li > a {
 }
 header .main-nav > li > a:hover {
     color: var(--main-color);
+    background-color: #fafafa;
 }
 header .main-nav > li > a::before {
     content: "";
