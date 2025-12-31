@@ -148,7 +148,7 @@ header .main-nav > li > a:hover::after {
     position: absolute;
     bottom: -240px;
     background-color: white;
-    height: 348px;
+    height: 362px;
     transform: skew(0deg, -6deg);
 }
 .landing .container {
