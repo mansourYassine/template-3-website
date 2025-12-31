@@ -148,7 +148,7 @@ header .main-nav > li > a:hover::after {
     position: absolute;
     bottom: -240px;
     background-color: white;
-    height: 373px;
+    height: 348px;
     transform: skew(0deg, -6deg);
 }
 .landing .container {
@@ -186,6 +186,18 @@ header .main-nav > li > a:hover::after {
 .landing .container > .landing-image > img {
     max-width: 100%;
     height: auto;
+    animation: elevator-image 6s linear infinite;
+}
+@keyframes elevator-image {
+    0% {
+        transform: translateY(25%);
+    }
+    50% {
+        transform: translateY(8%);
+    }
+    100% {
+        transform: translateY(25%);
+    }
 }
 
 /* End Landing */
