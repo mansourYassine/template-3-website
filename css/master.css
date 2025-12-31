@@ -96,7 +96,7 @@ header .main-nav > li > a {
     transition-duration: var(--main-transition-duration);
     z-index: 2;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     header .main-nav > li > a {
         padding: 0 10px;
         transition-duration: var(--main-transition-duration);
@@ -151,6 +151,11 @@ header .main-nav > li > a:hover::after {
     height: 362px;
     transform: skew(0deg, -6deg);
 }
+@media (max-width: 767.98px) {
+    .landing::after {
+        height: 310px;
+    }
+}
 .landing .container {
     display: flex;
     height: 80%;
@@ -159,18 +164,34 @@ header .main-nav > li > a:hover::after {
 .landing .container > .text {
     flex-shrink: 0;
     flex-grow: 1;
-    flex-basis: 550px;
+    flex-basis: 520px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 @media (max-width: 1199.98px) {
     .landing .container > .text {
         flex-basis: 350px;
     }
 }
-.landing .container > .text {
-    flex-direction: column;
-    justify-content: center;
+@media (max-width: 991.98px) {
+    .landing .container > .text {
+        max-width: 520px;
+        margin: auto;
+    }
 }
+@media (max-width: 767.98px) {
+    .landing .container > .text {
+        max-width: 500px;
+        margin: auto;
+    }
+}
+/* @media (max-width: 500px) {
+    .landing .container > .text {
+        min-width: fit-content;
+        margin: auto;
+    }
+} */
 .landing .container > .text h1 {
     font-size: 40px;
     letter-spacing: -1px;
@@ -178,11 +199,33 @@ header .main-nav > li > a:hover::after {
 }
 .landing .container > .text p {
     margin: 5px 0;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1.5;
     color: #686868;
 }
+@media (max-width: 991.98px) {
+    .landing .container > .text h1,
+    .landing .container > .text p {
+        text-align: center;
+    }
+    .landing .container > .text p {
+        line-height: 1.7;
+    }
+}
+@media (max-width: 767.98px) {
+    .landing .container > .text h1 {
+        font-size: 28px;
+    }
+    .landing .container > .text p {
+        font-size: 18px;
+    }
+}
 /* The image */
+@media (max-width: 991.98px) {
+    .landing .container > .landing-image {
+        display: none;
+    }
+}
 .landing .container > .landing-image > img {
     max-width: 100%;
     height: auto;
