@@ -202,8 +202,8 @@ header .main-nav > li > a:hover::after {
 .landing .container > .text p {
     margin: 5px 0;
     font-size: 23px;
-    line-height: 1.5;
-    color: #686868;
+    line-height: 1.7;
+    color: #666;
 }
 @media (max-width: 991.98px) {
     .landing .container > .text h1,
