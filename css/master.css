@@ -188,12 +188,6 @@ header .main-nav > li > a:hover::after {
         margin: auto;
     }
 }
-/* @media (max-width: 500px) {
-    .landing .container > .text {
-        min-width: fit-content;
-        margin: auto;
-    }
-} */
 .landing .container > .text h1 {
     font-size: 40px;
     letter-spacing: -2px;
@@ -209,9 +203,6 @@ header .main-nav > li > a:hover::after {
     .landing .container > .text h1,
     .landing .container > .text p {
         text-align: center;
-    }
-    .landing .container > .text p {
-        line-height: 1.7;
     }
 }
 @media (max-width: 767.98px) {
@@ -231,57 +222,45 @@ header .main-nav > li > a:hover::after {
 .landing .container > .landing-image > img {
     max-width: 100%;
     height: auto;
-    animation: elevator-image 4s linear infinite;
-}
-@keyframes elevator-image {
-    0% {
-        transform: translateY(15%);
-    }
-    50% {
-        transform: translateY(8%);
-    }
-    100% {
-        transform: translateY(15%);
-    }
+    animation: elevator-image 5s linear infinite;
 }
 /* Bottom arrow */
 .landing .scroll-bottom {
     color: var(--main-color);
     position: absolute;
     bottom: 30px;
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
     transition-duration: var(--main-transition-duration);
-    animation: scroll-bottom 1.5s ease infinite;
+    animation: bouncing 1.5s ease infinite;
     z-index: 1;
 }
 .landing .scroll-bottom:hover {
     color: var(--main-color-alt);
 }
-@keyframes scroll-bottom {
-    0% {
-        transform: translateY(0px);
-    }
-    10% {
-        transform: translateY(0px);
-    }
-    20% {
-        transform: translateY(0px);
-    }
-    40% {
-        transform: translateY(-15px);
+/* End Landing */
+/* Start Animation */
+@keyframes elevator-image {
+    0%,
+    100% {
+        transform: translateY(15%);
     }
     50% {
-        transform: translateY(0px);
+        transform: translateY(8%);
     }
-    60% {
-        transform: translateY(-15px);
-    }
-    80% {
-        transform: translateY(0px);
-    }
+}
+@keyframes bouncing {
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
     100% {
         transform: translateY(0px);
     }
+    40%, 
+    60% {
+        transform: translateY(-15px);
+    }
 }
-/* End Landing */
+/* End Animation */
