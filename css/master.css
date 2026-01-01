@@ -157,8 +157,10 @@ header .main-nav > li > a:hover::after {
     }
 }
 .landing .container {
-    display: flex;
     min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
 }
 /* The text */
 .landing .container > .text {
@@ -242,10 +244,10 @@ header .main-nav > li > a:hover::after {
 @keyframes elevator-image {
     0%,
     100% {
-        transform: translateY(15%);
+        transform: translateY(-10%);
     }
     50% {
-        transform: translateY(8%);
+        transform: translateY(0%);
     }
 }
 @keyframes bouncing {
