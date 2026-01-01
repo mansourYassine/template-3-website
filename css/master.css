@@ -247,7 +247,7 @@ header .main-nav > li > a:hover::after {
 /* Bottom arrow */
 .landing .scroll-bottom {
     position: absolute;
-    left: 49%;
+    left: 50%;
     transform: translateX(-50%);
     bottom: 30px;
     animation: scroll-bottom 1.5s ease infinite;
@@ -279,7 +279,7 @@ header .main-nav > li > a:hover::after {
         transform: translateY(0px);
     }
 }
-.landing .scroll-bottom > a {
+.landing .scroll-bottom {
     color: var(--main-color-alt);
     font-size: 15px;
     font-weight: bolder;
