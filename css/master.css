@@ -142,6 +142,7 @@ header .main-nav > li > a:hover::after {
     position: relative;
     overflow: hidden;
 }
+/* The white triangle */
 .landing::after {
     content: "";
     width: 100%;
@@ -183,6 +184,7 @@ header .main-nav > li > a:hover::after {
 @media (max-width: 767.98px) {
     .landing .container > .text {
         max-width: 500px;
+        flex-basis: 100px;
         margin: auto;
     }
 }
