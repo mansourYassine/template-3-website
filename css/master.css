@@ -247,7 +247,7 @@ header .main-nav > li > a:hover::after {
 /* Bottom arrow */
 .landing .scroll-bottom {
     position: absolute;
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
     bottom: 30px;
     animation: scroll-bottom 1.5s ease infinite;
