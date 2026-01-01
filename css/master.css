@@ -248,7 +248,7 @@ header .main-nav > li > a:hover::after {
     left: 50%;
     transform: translateX(-50%);
     bottom: 30px;
-    animation: scroll-bottom 2s ease infinite;
+    animation: scroll-bottom 1.5s ease infinite;
     z-index: 1;
 }
 @keyframes scroll-bottom {
@@ -277,7 +277,6 @@ header .main-nav > li > a:hover::after {
         transform: translateY(0px);
     }
 }
-
 .landing .scroll-bottom > a {
     color: var(--main-color-alt);
     font-size: 15px;
