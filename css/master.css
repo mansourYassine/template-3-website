@@ -246,12 +246,17 @@ header .main-nav > li > a:hover::after {
 }
 /* Bottom arrow */
 .landing .scroll-bottom {
+    color: var(--main-color);
     position: absolute;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 30px;
+    transition-duration: var(--main-transition-duration);
     animation: scroll-bottom 1.5s ease infinite;
     z-index: 1;
+}
+.landing .scroll-bottom:hover {
+    color: var(--main-color-alt);
 }
 @keyframes scroll-bottom {
     0% {
@@ -278,10 +283,5 @@ header .main-nav > li > a:hover::after {
     100% {
         transform: translateY(0px);
     }
-}
-.landing .scroll-bottom {
-    color: var(--main-color-alt);
-    font-size: 15px;
-    font-weight: bolder;
 }
 /* End Landing */
