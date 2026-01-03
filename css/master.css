@@ -285,9 +285,37 @@ header .main-nav > li > a:hover::after {
     justify-content: space-between;
     padding: 30px;
 }
+@media (max-width: 767.98px) {
+    .mega-menu .container {
+        display: block;
+        width: 100vw;
+        padding: 0;
+    }
+}
+/* The image */
+.mega-menu .image img {
+    max-width: 523px;
+}
+@media (max-width: 1199.98px) {
+    .mega-menu .image img {
+        max-width: 330px;
+    }
+}
+@media (max-width: 991.98px) {
+    .mega-menu .image {
+        display: none;
+    }
+}
+/* the links */
 .mega-menu ul {
     flex-basis: 250px;
     height: fit-content;
+}
+@media (max-width: 991.98px) {
+    .mega-menu ul {
+        flex-basis: 325px;
+        height: fit-content;
+    }
 }
 .mega-menu ul li {
     padding: 15px;
@@ -295,6 +323,11 @@ header .main-nav > li > a:hover::after {
 }
 .mega-menu ul :not(:last-child) {
     border-bottom: 1px solid rgb(227, 226, 226);
+}
+@media (max-width: 767.98px) {
+    .mega-menu ul:last-of-type li:first-child {
+        border-top: 1px solid rgb(227, 226, 226);
+    }
 }
 .mega-menu ul li a {
     color: var(--main-color);
