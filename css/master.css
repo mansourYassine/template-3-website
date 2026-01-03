@@ -212,6 +212,7 @@ header .main-nav > li > a:hover::after {
 .landing {
     background-color: #eaeaea;
     position: relative;
+    z-index: -1;
     overflow: hidden;
 }
 /* The white triangle */
