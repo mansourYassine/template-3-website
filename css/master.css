@@ -79,8 +79,8 @@ header .logo {
 header .main-nav {
     display: flex;
 }
-header .main-nav li:last-child a:hover + .mega-menu {
-    z-index: 1;
+header .main-nav li:hover .mega-menu {
+    z-index: 100;
     transform: translate(-50%, 0);
     opacity: 100%;
 }
