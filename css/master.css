@@ -82,6 +82,7 @@ header .main-nav {
 header .main-nav li:last-child a:hover + .mega-menu {
     z-index: 1;
     transform: translate(-50%, 0);
+    opacity: 100%;
 }
 @media (max-width: 768px) {
     header .main-nav {
@@ -141,10 +142,11 @@ header .main-nav > li > a:hover::after {
 /* Start Mega Menu */
 .mega-menu {
     position: absolute;
-    z-index: 0;
+    z-index: -10;
     left: 50%;
     transform: translate(-50%, 20%);
-    transition-duration: 0.5s;
+    opacity: 0;
+    transition-duration: var(--main-transition-duration);
 }
 .mega-menu .container {
     background-color: white;
