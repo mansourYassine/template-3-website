@@ -58,7 +58,7 @@ ul {
 }
 .main-title:hover {
     color: white;
-    border: 0px solid white;
+    border: 2px solid white;
     transition: all var(--main-transition-duration) calc(var(--main-transition-duration) * 2) linear;
 }
 .main-title::before {
