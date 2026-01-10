@@ -47,6 +47,38 @@ ul {
     }
 }
 /* End global rules */
+/* Start Main Title */
+.main-title {
+    margin: 0 auto 30px;
+    width: fit-content;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 1.9rem;
+    position: relative;
+}
+.main-title::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-title::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* End Main Title */
 /* Start Header */
 header {
     background-color: white;
@@ -335,7 +367,7 @@ header .main-nav > li > a:hover::after {
     100% {
         transform: translateY(0px);
     }
-    40%, 
+    40%,
     60% {
         transform: translateY(-15px);
     }
