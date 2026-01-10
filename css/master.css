@@ -56,6 +56,11 @@ ul {
     font-size: 1.9rem;
     position: relative;
 }
+.main-title:hover {
+    color: white;
+    border: 0px solid white;
+    transition: all var(--main-transition-duration) calc(var(--main-transition-duration) * 2) linear;
+}
 .main-title::before {
     content: "";
     position: absolute;
@@ -67,6 +72,17 @@ ul {
     top: 50%;
     transform: translateY(-50%);
 }
+.main-title:hover:before {
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    z-index: -1;
+    transition: left var(--main-transition-duration) linear,
+        width var(--main-transition-duration) var(--main-transition-duration) linear,
+        height var(--main-transition-duration) var(--main-transition-duration) linear,
+        border-radius var(--main-transition-duration) var(--main-transition-duration) linear;
+}
 .main-title::after {
     content: "";
     position: absolute;
@@ -77,6 +93,17 @@ ul {
     right: -30px;
     top: 50%;
     transform: translateY(-50%);
+}
+.main-title:hover::after {
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    z-index: -1;
+    transition: right var(--main-transition-duration) linear,
+        width var(--main-transition-duration) var(--main-transition-duration) linear,
+        height var(--main-transition-duration) var(--main-transition-duration) linear,
+        border-radius var(--main-transition-duration) var(--main-transition-duration) linear;
 }
 /* End Main Title */
 /* Start Header */
