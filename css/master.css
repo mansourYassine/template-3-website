@@ -375,7 +375,7 @@ header .main-nav > li > a:hover::after {
     color: var(--main-color-alt);
 }
 /* End Landing */
-/* Start Animation */
+/* Start Animation Landing*/
 @keyframes elevator-image {
     0%,
     100% {
@@ -399,4 +399,4 @@ header .main-nav > li > a:hover::after {
         transform: translateY(-15px);
     }
 }
-/* End Animation */
+/* End Animation Landing*/
