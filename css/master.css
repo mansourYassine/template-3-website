@@ -7,6 +7,9 @@
     --main-color-alt: #1787e0;
     --header-height: 72px;
     --main-transition-duration: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --main-text-color: #666666;
 }
 html {
     scroll-behavior: smooth;
@@ -49,7 +52,7 @@ ul {
 /* End global rules */
 /* Start Main Title */
 .main-title {
-    margin: 0 auto 30px;
+    margin: 0 auto 80px;
     width: fit-content;
     border: 2px solid black;
     padding: 10px 20px;
@@ -333,7 +336,7 @@ header .main-nav > li > a:hover::after {
     margin: 5px 0;
     font-size: 23px;
     line-height: 1.7;
-    color: #666;
+    color: var(--main-text-color);
 }
 @media (max-width: 991.98px) {
     .landing .container > .text h1,
@@ -400,3 +403,71 @@ header .main-nav > li > a:hover::after {
     }
 }
 /* End Animation Landing*/
+/* Start Articles */
+.articles {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.articles .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    gap: 40px;
+}
+.articles .card {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px 5px #8080801c;
+    position: relative;
+    top: 0;
+    transition: all var(--main-transition-duration) ease;
+}
+.articles .card:hover {
+    top: -10px;
+    box-shadow: 0px 1px 7px 6px #8080802f;
+}
+.articles .card img {
+    max-width: 100%;
+}
+.articles .card .content {
+    padding: 20px;
+}
+.articles .card .content h3 {
+    margin: 0;
+}
+.articles .card .content p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: var(--main-text-color);
+}
+.articles .card .foot {
+    border-top: #e9e9ea 1px solid;
+    padding: 20px;
+    position: relative;
+}
+.articles .card .foot a {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.articles .card .foot i {
+    color: var(--main-color);
+    font-size: 0.9em;
+    position: absolute;
+    right: 20px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.articles .card:hover .foot i {
+    animation: article-arrow-bounce 0.6s ease-in infinite;
+}
+/* End Articles */
+/* Start Animations Articles*/
+@keyframes article-arrow-bounce {
+    from {
+        right: 20px;
+    }
+    to {
+        right: 13px;
+    }
+}
+/* End Animations Articles*/
