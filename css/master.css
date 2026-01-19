@@ -451,7 +451,7 @@ header .main-nav > li > a:hover::after {
 }
 .articles .card .foot i {
     color: var(--main-color);
-    font-size: 0.9em;
+    font-size: 0.7em;
     position: absolute;
     right: 20px;
     transform: translateY(-50%);
