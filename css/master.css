@@ -416,14 +416,15 @@ header .main-nav > li > a:hover::after {
 .articles .card {
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: 0;
-    transition: all var(--main-transition-duration) ease;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: 
+        transform var(--main-transition-duration),
+        box-shadow var(--main-transition-duration);
 }
 .articles .card:hover {
-    top: -10px;
-    box-shadow: 0px 1px 7px 6px #8080802f;
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
 }
 .articles .card img {
     max-width: 100%;
