@@ -416,7 +416,7 @@ header .main-nav > li > a:hover::after {
 .articles .card {
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0px 0px 7px 5px #8080801c;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     top: 0;
     transition: all var(--main-transition-duration) ease;
