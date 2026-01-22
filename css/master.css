@@ -5,6 +5,7 @@
 :root {
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
+    --section-color: #ececec;
     --header-height: 72px;
     --main-transition-duration: 0.3s;
     --main-padding-top: 100px;
@@ -274,7 +275,7 @@ header .main-nav > li > a:hover::after {
 /* End Header */
 /* Start Landing */
 .landing {
-    background-color: #eaeaea;
+    background-color: var(--section-color);
     position: relative;
     z-index: 1;
     overflow: hidden;
