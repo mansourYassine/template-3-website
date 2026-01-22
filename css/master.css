@@ -59,6 +59,7 @@ ul {
     padding: 10px 20px;
     font-size: 1.9rem;
     position: relative;
+    z-index: 100;
 }
 .main-title:hover {
     color: white;
