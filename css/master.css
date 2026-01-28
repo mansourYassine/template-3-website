@@ -10,7 +10,7 @@
     --main-transition-duration: 0.3s;
     --main-padding-top: 100px;
     --main-padding-bottom: 100px;
-    --main-text-color: #666666;
+    --main-text-color: #777;
 }
 html {
     scroll-behavior: smooth;
@@ -64,7 +64,8 @@ ul {
 .main-title:hover {
     color: white;
     border: 2px solid white;
-    transition: all var(--main-transition-duration) calc(var(--main-transition-duration) * 2) linear;
+    transition: all var(--main-transition-duration)
+        calc(var(--main-transition-duration) * 2) linear;
 }
 .main-title::before {
     content: "";
@@ -83,10 +84,14 @@ ul {
     height: 100%;
     border-radius: 0;
     z-index: -1;
-    transition: left var(--main-transition-duration) linear,
-        width var(--main-transition-duration) var(--main-transition-duration) linear,
-        height var(--main-transition-duration) var(--main-transition-duration) linear,
-        border-radius var(--main-transition-duration) var(--main-transition-duration) linear;
+    transition:
+        left var(--main-transition-duration) linear,
+        width var(--main-transition-duration) var(--main-transition-duration)
+            linear,
+        height var(--main-transition-duration) var(--main-transition-duration)
+            linear,
+        border-radius var(--main-transition-duration)
+            var(--main-transition-duration) linear;
 }
 .main-title::after {
     content: "";
@@ -105,10 +110,14 @@ ul {
     height: 100%;
     border-radius: 0;
     z-index: -1;
-    transition: right var(--main-transition-duration) linear,
-        width var(--main-transition-duration) var(--main-transition-duration) linear,
-        height var(--main-transition-duration) var(--main-transition-duration) linear,
-        border-radius var(--main-transition-duration) var(--main-transition-duration) linear;
+    transition:
+        right var(--main-transition-duration) linear,
+        width var(--main-transition-duration) var(--main-transition-duration)
+            linear,
+        height var(--main-transition-duration) var(--main-transition-duration)
+            linear,
+        border-radius var(--main-transition-duration)
+            var(--main-transition-duration) linear;
 }
 /* End Main Title */
 /* Start Header */
@@ -420,7 +429,7 @@ header .main-nav > li > a:hover::after {
     overflow: hidden;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     background-color: white;
-    transition: 
+    transition:
         transform var(--main-transition-duration),
         box-shadow var(--main-transition-duration);
 }
@@ -489,15 +498,9 @@ header .main-nav > li > a:hover::after {
 .gallery .zigzag-border::after {
     content: "";
     position: absolute;
-    background: linear-gradient(
-        -45deg,
-        #ececec 50%,
-        transparent 50%
-    ), linear-gradient(
-        45deg,
-        transparent 50%,
-        white 50%
-    );
+    background:
+        linear-gradient(-45deg, #ececec 50%, transparent 50%),
+        linear-gradient(45deg, transparent 50%, white 50%);
     background-size: 30px;
     background-repeat: repeat-x;
     width: 100%;
@@ -511,7 +514,7 @@ header .main-nav > li > a:hover::after {
 }
 .gallery .card {
     background-color: white;
-    box-shadow: 
+    box-shadow:
         0px 12px 20px 0px rgba(0, 0, 0, 13%),
         0px 2px 4px 0px rgba(0, 0, 0, 12%);
     padding: 15px;
@@ -523,7 +526,7 @@ header .main-nav > li > a:hover::after {
 .gallery .card .image::before {
     content: "";
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 0px;
@@ -556,3 +559,143 @@ header .main-nav > li > a:hover::after {
     }
 }
 /* End Animation Gallery */
+/* Start Features Section */
+.features {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    --card-1-color: #f44036;
+    --card-2-color: #009688;
+    --card-3-color: #03a9f4;
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.features .card {
+    border: 1px solid #d2d2d2;
+}
+.features .card .image {
+    position: relative;
+    overflow: hidden;
+}
+.features .card .image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+}
+.features .card-1 .image::before {
+    background-color: var(--card-1-color);
+}
+.features .card-2 .image::before {
+    background-color: var(--card-2-color);
+}
+.features .card-3 .image::before {
+    background-color: var(--card-3-color);
+}
+.features .card .image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    left: 0px;
+    bottom: -194px;
+    z-index: 2;
+    transform: skewY(-20deg);
+    transition-duration: var(--main-transition-duration);
+}
+.features .card:hover .image::after {
+    transform: rotate(269deg) skewX(342deg);
+    bottom: -307px;
+    height: 103%;
+    left: 9px;
+}
+.features .card .image img {
+    max-width: 100%;
+}
+.features .card .content {
+}
+.features .card .content h3 {
+    font-size: 2.5em;
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
+}
+.features .card .content h3::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 5px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .card-1 .content h3::before {
+    background-color: var(--card-1-color);
+}
+.features .card-2 .content h3::before {
+    background-color: var(--card-2-color);
+}
+.features .card-3 .content h3::before {
+    background-color: var(--card-3-color);
+}
+.features .card .content p {
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 2;
+    margin: 30px 0;
+    padding: 25px;
+}
+.features .card .button {
+    display: block;
+    margin: 0 auto 30px;
+    width: fit-content;
+    padding: 10px 30px;
+    border: 2.5px solid;
+    border-radius: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+    position: relative;
+}
+.features .card:hover .button {
+    color: white;
+}
+.features .card .button::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition-duration: var(--main-transition-duration);
+}
+.features .card:hover .button::before {
+    width: 100%;
+}
+.features .card-1 .button {
+    border-color: var(--card-1-color);
+    color: var(--card-1-color);
+}
+.features .card-2 .button {
+    border-color: var(--card-2-color);
+    color: var(--card-2-color);
+}
+.features .card-3 .button {
+    border-color: var(--card-3-color);
+    color: var(--card-3-color);
+}
+.features .card-1 .button::before {
+    background-color: var(--card-1-color);
+}
+.features .card-2 .button::before {
+    background-color: var(--card-2-color);
+}
+.features .card-3 .button::before {
+    background-color: var(--card-3-color);
+}
+/* End Features Section */
