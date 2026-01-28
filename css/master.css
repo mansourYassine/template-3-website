@@ -520,6 +520,21 @@ header .main-nav > li > a:hover::after {
     overflow: hidden;
     position: relative;
 }
+.gallery .card .image::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background-color: rgb(255 255 255 / 20%);
+    opacity: 0;
+    z-index: 1;
+}
+.gallery .card .image:hover::before {
+    animation: flashing 0.7s;
+}
 .gallery .card .image > img {
     max-width: 100%;
     transition: all var(--main-transition-duration);
@@ -527,27 +542,17 @@ header .main-nav > li > a:hover::after {
 .gallery .card .image:hover > img {
     transform: rotate(5deg) scale(1.1);
 }
-.gallery .card .image:hover::before {
-    content: "";
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    animation: gallery-effect var(--main-transition-duration) ease;
-}
 /* End Gallery */
 /* Start Animation Gallery */
-@keyframes gallery-effect {
-    from {
-        width: 1px;
-        height: 1px;
-        background-color: rgb(255 255 255 / 20%);
+@keyframes flashing {
+    0%,
+    40% {
+        opacity: 1;
     }
-    to {
-        width: 100%;
-        height: 100%;
-        background-color: rgb(255 255 255 / 20%);
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
     }
 }
 /* End Animation Gallery */
