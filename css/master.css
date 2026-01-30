@@ -710,6 +710,9 @@ header .main-nav > li > a:hover::after {
 .testimonials .card .rating i {
     font-size: 15px;
 }
+.testimonials .card .rating .filled {
+    color: #ffc107;
+}
 .testimonials .card .review {
     color: var(--main-text-color);
     line-height: 1.5;
