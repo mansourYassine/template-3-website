@@ -665,3 +665,54 @@ header .main-nav > li > a:hover::after {
     width: 100%;
 }
 /* End Features Section */
+/* Start Testimonials */
+.testimonials {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-color);
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.testimonials .card {
+    background-color: white;
+    box-shadow: 0px 3px 5px #8080801c;
+    padding: 20px 20px 18px;
+    border-radius: 7px;
+    position: relative;
+}
+.testimonials .card .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--section-color);
+    position: absolute;
+    top: -50px;
+    right: -10px;
+}
+.testimonials .card .image img {
+    max-width: 100%;
+}
+.testimonials .card .name {
+    margin: 0 0 10px;
+}
+.testimonials .card .role {
+    color: var(--main-text-color);
+    font-weight: normal;
+    margin: 6px 0;
+}
+.testimonials .card .rating {
+    margin: 10px 0;
+}
+.testimonials .card .rating i {
+    font-size: 15px;
+}
+.testimonials .card .review {
+    color: var(--main-text-color);
+    line-height: 1.5;
+    margin: 2px 0;
+}
+/* End Testimonials */
