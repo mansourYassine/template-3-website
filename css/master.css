@@ -702,10 +702,7 @@ header .main-nav > li > a:hover::after {
 .testimonials .card .role {
     color: var(--main-text-color);
     font-weight: normal;
-    margin: 6px 0;
-}
-.testimonials .card .rating {
-    margin: 10px 0;
+    margin: 0px 0px 10px;
 }
 .testimonials .card .rating i {
     font-size: 15px;
@@ -716,6 +713,6 @@ header .main-nav > li > a:hover::after {
 .testimonials .card .review {
     color: var(--main-text-color);
     line-height: 1.5;
-    margin: 2px 0;
+    margin: 10px 0 0;
 }
 /* End Testimonials */
