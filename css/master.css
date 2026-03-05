@@ -716,3 +716,102 @@ header .main-nav > li > a:hover::after {
     margin: 10px 0 0;
 }
 /* End Testimonials */
+/* Start Team Members */
+.team-members {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    --card-image-width: 300px; 
+}
+.team-members .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.team-members .card {
+    height: 460px;
+    /* min-width: 350px; */
+    border-radius: 15px;
+    display: flex;
+}
+.team-members .card .white-side {
+    width: 20%;
+}
+.team-members .card .content {
+    background-color: #f3f3f3;
+    padding-top: 60px;
+    border-radius: 15px;
+    flex: 3;
+    position: relative;
+}
+.team-members .card .content::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #e4e4e4;
+    transition-duration: var(--main-transition-duration);
+}
+.team-members .card:hover .content::before {
+    width: 100%;
+}
+.team-members .card .head {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: var(--card-image-width);
+}
+.team-members .card .head .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 35px;
+    flex-basis: calc(100% - (var(--card-image-width) - 70px));
+    color: var(--main-text-color);
+}
+.team-members .card .head .social-media a {
+    color: var(--main-text-color);
+}
+.team-members .card .head .social-media i {
+    transition-duration: var(--main-transition-duration);
+}
+.team-members .card .head .social-media i:hover {
+    color: var(--main-color);
+}
+.team-members .card .head .image {
+    width: var(--card-image-width);
+    position: absolute;
+    left: -70px;
+    transition-duration: var(--main-transition-duration);
+}
+.team-members .card:hover .head .image {
+    filter: grayscale(100%);
+    min-width: var(--card-image-width);
+}
+.team-members .card .head .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.team-members .card .text {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    padding: 0 20px;
+}
+.team-members .card .text h3 {
+    color: var(--main-color);
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    transition-duration: var(--main-transition-duration);
+}
+.team-members .card:hover .text h3 {
+    color: var(--main-text-color);
+}
+.team-members .card .text p {
+    margin-top: 5px;
+}
+/* End Team Members */
